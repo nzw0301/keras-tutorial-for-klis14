@@ -1,11 +1,13 @@
 import numpy as np
-np.random.seed(1112) # 再現性のため，値はなんでもいい
 
 def sigmoid(u):
   return 1/(1+np.exp(-u))
 
+if __name__ == '__main__':
+  x = np.array([20, 10, 4, 0])
+  w = np.array([0.1, -0.2, -0.3, 1])
+  b = 1.
 
-x = np.arange(-5, 5)
-w = np.random.rand(10)
-
-print(sigmoid(w.dot(x)))
+  u = w.dot(x)
+  z = sigmoid(u+b)
+  print(z)
