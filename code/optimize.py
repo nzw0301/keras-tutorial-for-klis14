@@ -4,12 +4,10 @@ from unit import sigmoid
 from loss import binary_cross_entropy
 
 if __name__ == '__main__':
-  np.random.seed(1112)
-
   x, y  = np.array([20, 10, 4, 0]), 1.
   w, b = np.array([0.1, -0.2, -0.3, 1]), 1.
 
-  eta = .01
+  eta = 0.01
 
   print(sigmoid(w.dot(x)+b))
 
@@ -23,5 +21,3 @@ if __name__ == '__main__':
     b -= eta*(z-y)
 
   print(sigmoid(w.dot(x)+b))
-
-

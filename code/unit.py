@@ -1,7 +1,9 @@
 import numpy as np
 
+
 def sigmoid(u):
   return 1/(1+np.exp(-u))
+
 
 if __name__ == '__main__':
   x = np.array([20, 10, 4, 0])
